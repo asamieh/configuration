@@ -30,6 +30,9 @@ set smartcase
 set noswapfile
 set nobackup
 set incsearch
+set hlsearch
+set cursorline
+"set cursorcolumn
 "set background=dark
 "set number relativenumber
 
@@ -38,7 +41,7 @@ set path+=**
 "set wildmode=list:lastused
 set wildmenu
 
-command! MakeTags !ctags -R
+command! MakeTags !ctags --recurse=yes --exclude=.git --exclude=PreBuild
 set tags=tags
 
 set undodir=~/.vim/undodir
